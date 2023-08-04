@@ -1,0 +1,75 @@
+---
+import "@fontsource-variable/bodoni-moda";
+import "@fontsource-variable/raleway";
+
+import Header from "../components/Header.astro";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="noindex" />
+    <title>Manifiesto por la maternidad</title>
+    <style>
+      [x-cloak] {
+        display: none !important;
+      }
+
+      body {
+        /* https://webgradients.com/ */
+
+        /* background-color: #8ec5fc;
+        background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%); */
+
+        /* background-color: #4158D0;
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+
+        /* background-color: #D9AFD9;
+        background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%); */
+
+        /* background-color: #0093E9;
+        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+
+        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+      }
+    </style>
+  </head>
+  <body class="flex flex-col md:mx-20">
+    <Header />
+
+    <main class="border-b border-b-black">
+      <slot />
+    </main>
+
+    <section class="py-8">
+      <h3 class="text-4xl text-center">
+        Texto para las personas que ya han firmado el manifiesto
+      </h3>
+
+      <div
+        class="grid grid-cols-3 gap-4 justify-center items-center font-serif py-8 text-lg"
+      >
+        <span class="text-center">Marie Curie</span>
+        <span class="text-center">Virginia Woolf</span>
+        <span class="text-center">Clara Zetkin</span>
+        <span class="text-center">Clara Campoamor</span>
+        <span class="text-center">Amelia Earhart</span>
+        <span class="text-center">Frida Kahlo</span>
+        <span class="text-center">Simone de Beauvoir</span>
+        <span class="text-center">Ruth Bader Ginsburg</span>
+        <span class="text-center">Audre Lorde</span>
+      </div>
+    </section>
+
+    <footer
+      class="border-t border-t-black grid grid-cols-3 divide-x divide-black"
+    >
+      <div class="text-center py-6"><a href="/">Política de privacidad</a></div>
+      <div class="text-center py-6"><a href="/">Política de cookies</a></div>
+      <div class="text-center py-6"><a href="/">Aviso legal</a></div>
+    </footer>
+  </body>
+</html>
