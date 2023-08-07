@@ -1,85 +1,84 @@
 ---
 import Base from "../layouts/Base.astro";
+import Section from "../components/home/Section.astro";
 ---
 
 <Base>
-  <section class="max-w-5xl mx-auto pt-64 pb-8">
-    <h1 class="text-8xl font-light">
-      <span class="block">
-        <span class="font-serif font-bold">Manifiesto</span> por
-      </span>
-      <span class="block text-right">
-        la <span class="font-serif font-bold">maternidad</span>
-      </span>
-    </h1>
-  </section>
+	<section
+		class="max-w-sm mx-auto pt-16 pb-8 md:pt-64 md:max-w-2xl lg:max-w-5xl"
+	>
+		<h1 class="text-4xl md:text-6xl lg:text-8xl font-light">
+			<span class="block">
+				<span class="font-serif font-black">Manifiesto</span> por
+			</span>
+			<span class="block text-right">
+				las <span class="font-serif font-black">madres</span>
+			</span>
+		</h1>
+	</section>
 
-  <section class="border-t border-t-black grid grid-cols-3">
-    <section class="border-r border-r-black">
-      <section class="py-8 pr-8 sticky top-0">
-        <h3 class="text-3xl mb-4">
-          Texto para animar a firmar el manifiesto. Fusce at dolor dictum,
-          molestie est id, posuere sem. Donec vestibulum lectus vel finibus
-          pretium.
-        </h3>
+	<section
+		class="grid grid-cols-1 md:grid-cols-3 md:border-t md:border-t-black"
+	>
+		<section class="md:border-r md:border-r-black">
+			<section class="py-8 md:pr-8 md:sticky md:top-0">
+				<h3 class="text-lg mb-4 md:text-xl lg:text-3xl">
+					Luchamos por la mujer, luchamos por la humanidad y por la biosfera.
+				</h3>
 
-        <a
-          href="/"
-          class="inline-block w-full border border-black bg-transparent py-4 px-8"
-        >
-          Firma el manifiesto (Google Forms) &#8594;
-        </a>
-      </section>
-    </section>
+				<p class="font-serif font-bold mb-4">Google forms</p>
 
-    <section class="col-start-2 col-end-4">
-      <!-- CARD -->
-      <section
-        class="pt-8 pl-8 h-96 flex flex-col justify-end items-start border-b border-b-black"
-      >
-        <h2 class="text-4xl">
-          Quisque finibus finibus elit sit amet vulputate. Pellentesque ultrices
-          dui sed mi ullamcorper, vitae sollicitudin purus viverra. Nunc
-          porttitor et urna id ultrices. Donec id neque non ante tincidunt
-          pellentesque eget in nisl.
-        </h2>
+				<a
+					href="/"
+					class="inline-block w-full border border-black bg-transparent py-4 px-8"
+				>
+					Firma el manifiesto &#8594;
+				</a>
+			</section>
+		</section>
 
-        <div class="flex justify-end w-full">
-          <a
-            href="/"
-            class="border border-b-0 border-black bg-transparent py-4 px-8"
-          >
-            Leélo online &#8594;
-          </a>
-        </div>
-      </section>
+		<section class="md:col-start-2 md:col-end-4">
+			<Section
+				title="Manifiesto"
+				subtitle="Es necesario y urgente cambiar la noción y el modelo vigentes de maternidad."
+				href="/manifiesto/"
+				buttonText="Manifiesto"
+			/>
 
-      <!-- CARD -->
-      <section class="flex flex-col justify-end items-start border-b border-b-black">
-        <div class="aspect-video w-full">
-          <iframe
-            class="w-full h-full aspect-video"
-            src="https://www.youtube-nocookie.com/embed/ozs_f4ZT9sw"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-        </div>
-      </section>
+			<!-- CARD -->
+			<Section
+				title="Propuestas"
+				subtitle="Exigimos una serie de propuestas necesarias para la urgente transformación de nuestra sociedad."
+				href="/propuestas/"
+				buttonText="Propuestas"
+			/>
 
-      <!-- CARD -->
-      <section
-        class="pt-8 pl-8 h-96 flex flex-col justify-end items-start"
-      >
-        <h2 class="text-4xl">Escucha el audio.</h2>
+			<!-- CARD -->
+			<!-- <section
+				class="flex flex-col justify-end items-start border-b border-b-black"
+			>
+				<div class="aspect-video w-full">
+					<iframe
+						class="w-full h-full aspect-video"
+						src="https://www.youtube-nocookie.com/embed/ozs_f4ZT9sw"
+						title="YouTube video player"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen></iframe>
+				</div>
+			</section> -->
 
-        <div class="flex justify-end w-full">
-          <audio controls>
-            <source src="/audio/example.ogg" type="audio/ogg" />
-            <source src="/audio/example.mp3" type="audio/mpeg" />
-            Your browser does not support the audio tag.
-          </audio>
-        </div>
-      </section>
-    </section>
-  </section>
+			<!-- CARD -->
+			<!-- <section class="pt-8 pl-8 min-h-96 flex flex-col justify-end items-start">
+				<h2 class="text-4xl">Escucha el audio.</h2>
+
+				<div class="flex justify-end w-full">
+					<audio controls>
+						<source src="/audio/example.ogg" type="audio/ogg" />
+						<source src="/audio/example.mp3" type="audio/mpeg" />
+						 Your browser does not support the audio tag.
+					</audio>
+				</div>
+			</section> -->
+		</section>
+	</section>
 </Base>

@@ -1,0 +1,26 @@
+---
+import SectionButton from "./SectionButton.astro";
+
+export interface Props {
+	title: string;
+	subtitle: string;
+	href: string;
+	buttonText: string;
+}
+
+const { title, subtitle, href, buttonText } = Astro.props;
+---
+
+<section
+	class="h-60 flex flex-col gap-2 justify-end items-start border border-b-0 border-black pt-4 pl-4 md:pt-8 md:pl-8 md:h-72 md:border-0 md:border-b lg:h-96 lg:gap-0 last-of-type:border-b-0"
+>
+	<h2 class="text-xl font-serif font-black md:mb-4 md:text-2xl lg:text-4xl">
+		{title}
+	</h2>
+	<h3 class="text-lg pb-0 pr-4 md:pb-4 md:text-xl lg:text-3xl">
+		{subtitle}
+	</h3>
+	<div class="flex justify-end w-full">
+		<SectionButton href={href} text={buttonText} />
+	</div>
+</section>
