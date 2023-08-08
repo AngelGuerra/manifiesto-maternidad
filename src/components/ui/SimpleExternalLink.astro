@@ -1,0 +1,15 @@
+---
+export interface Props {
+	href: string;
+	text: string;
+}
+
+const { href, text } = Astro.props;
+---
+
+<a
+	href={href}
+	target="_blank"
+	rel="noopener noreferrer external"
+	class="text-blue-700 underline">{text}</a
+>

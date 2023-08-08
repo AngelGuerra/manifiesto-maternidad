@@ -1,5 +1,84 @@
 ---
 import Base from "../layouts/Base.astro";
+import Section from "../components/propuestas/Section.astro";
 ---
 
-<Base />
+<Base>
+	<article>
+		<header class="mb-16 pt-16 md:pt-64">
+			<h1
+				class="font-serif font-black text-center text-4xl md:text-6xl lg:text-8xl"
+			>
+				Propuestas
+			</h1>
+		</header>
+
+		<section class="flex flex-col justify-end items-end gap-4 text-lg pb-0 pr-4 font-medium md:pb-4 md:text-xl lg:text-3xl">
+			<p>
+				Las personas y colectivas firmantes de este manifiesto estamos muy
+				preocupadas por los retrocesos que estamos viviendo en la actualidad y
+				exigimos una serie de propuestas necesarias para la urgente
+				transformación de una sociedad cada día más individualista, competitiva,
+				adultocéntrica, consumista, machista, misógina, racista, depredadora de
+				la naturaleza, enemiga de las diferencias y fratricida.
+			</p>
+		</section>
+
+		<div class="h-52 lg:h-96 w-px my-12 bg-black mx-auto"></div>
+
+		<section>
+			<p
+				class="text-2xl font-serif font-black text-center md:text-3xl lg:text-5xl mb-12"
+			>
+				Por este motivo demandamos
+			</p>
+		</section>
+
+		<div class="grid grid-cols-1 md:grid-cols-2">
+			<Section
+				title="Díada madre-criatura"
+				text="Reconocimiento universal de la díada madre-criatura como unidad básica, prestándole todo el apoyo social necesario."
+			/>
+			<Section
+				title="Deseo materno, amor y bienestar"
+				text="La recuperación y el reconocimiento del deseo materno como parte imprescindible de una cultura basada en el amor y en el bienestar desde la infancia, que nos acompañará toda la vida."
+			/>
+			<Section
+				title="Apoyo mutuo y solidaridad"
+				text="La restauración del orden simbólico de la madre que eliminará el actual gobierno patriarcal para construir una sociedad bajo los principios del apoyo mutuo y la solidaridad."
+			/>
+			<Section
+				title="Maternar de forma digna"
+				text="La visibilización y reconocimiento del trabajo de crianza y la dotación de derechos y recursos para maternar de forma digna."
+			/>
+			<Section
+				title="Espacios comunitarios"
+				text="El fomento de los espacios comunitarios para la crianza y los grupos de madres, para evitar el aislamiento, la sobrecarga y la soledad de las madres."
+			/>
+			<Section
+				title="Infancia como patrón de humanización"
+				text="La recuperación de la infancia como patrón de humanización de la sociedad, teniendo en cuenta sus necesidades y el respeto a sus ritmos vitales en los tiempos sociales y laborales. En particular, su derecho a ser tratados con complacencia y no con autoridad, y su plena incorporación en todos los espacios de la sociedad."
+			/>
+			<Section
+				title="Autonomía de la mujer"
+				text="El respeto a los procesos y pulsiones sexuales de las mujeres y a la ciclicidad de sus tiempos, garantizando su autonomía y decisión sobre su propio cuerpo y un conocimiento científico veraz y con perspectiva de género."
+			/>
+			<Section
+				title="Eliminación de las violencias machistas"
+				text="La eliminación de todas las violencias machistas ejercidas hacia las mujeres y en concreto hacia las madres (como la violencia obstétrica, económica, institucional, judicial, cultural y simbólica)."
+			/>
+			<Section
+				title="Apoyo a las madres protectoras"
+				text="El apoyo a las madres protectoras (que defienden a sus hijas e hijos de sus padres maltratadores) y su protección ante un sistema judicial patriarcal."
+			/>
+			<Section
+				title="Eliminación de la desvalorización"
+				text="La eliminación de todas las medidas que llevan a una desvalorización y usurpación de la función materna: custodias compartidas impuestas, pernoctas impuestas de bebés lactantes, vientres de alquiler, permisos iguales e intransferibles, falso síndrome de alienación parental."
+			/>
+			<Section
+				title="Eliminación de la discriminación"
+				text="La eliminación de la actual discriminación hacia las madres en situación de vulnerabilidad o diversas, con medidas específicas, demandadas por los propios colectivos: monomarentales, migrantes, racializadas, con discapacidad, precarizadas, mujeres del ámbito rural, madres lesbianas, etc."
+			/>
+		</div>
+	</article>
+</Base>

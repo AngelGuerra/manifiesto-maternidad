@@ -1,0 +1,12 @@
+---
+export interface Props {
+	href: string;
+	text: string;
+}
+
+const { href, text } = Astro.props;
+---
+
+<sup>
+	<a href={`#${href}`} class="text-blue-700 font-serif font-extrabold">{text}</a>
+</sup>
