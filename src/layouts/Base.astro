@@ -5,6 +5,12 @@ import "@fontsource-variable/raleway";
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
 import Signatures from "../components/common/Signatures.astro";
+
+export interface Props {
+	showSignatures?: boolean;
+}
+
+const { showSignatures = true } = Astro.props;
 ---
 
 <html lang="es-ES" class="scroll-smooth">
@@ -34,21 +40,25 @@ import Signatures from "../components/common/Signatures.astro";
 			}
 		</style>
 	</head>
-	<body class="flex flex-col px-4 md:px-0 md:mx-20">
+	<body class="flex flex-col px-4 min-h-screen md:px-0 md:mx-20">
 		<Header />
 
-		<main class="border-b border-b-black">
+		<main class="border-b border-b-black grow">
 			<slot />
 		</main>
 
-		<Signatures />
+		{showSignatures && <Signatures />}
 
-		<footer
-			class="border-t border-t-black grid grid-cols-3 divide-x divide-black"
-		>
-			<div class="text-center py-6"><a href="/">Política de privacidad</a></div>
-			<div class="text-center py-6"><a href="/">Política de cookies</a></div>
-			<div class="text-center py-6"><a href="/">Aviso legal</a></div>
+		<footer class="grid grid-cols-3 divide-x divide-black">
+			<div class="text-center py-6">
+				<a href="/politica-de-privacidad/">Política de privacidad</a>
+			</div>
+			<div class="text-center py-6">
+				<a href="/politica-de-cookies/">Política de cookies</a>
+			</div>
+			<div class="text-center py-6">
+				<a href="/aviso-legal/">Aviso legal</a>
+			</div>
 		</footer>
 	</body>
 </html>

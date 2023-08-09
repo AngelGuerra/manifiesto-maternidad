@@ -2,11 +2,12 @@
 import Base from "../layouts/Base.astro";
 import Section from "../components/home/Section.astro";
 import SectionButton from "../components/home/SectionButton.astro";
+import LinkButton from "../components/ui/LinkButton.astro";
 ---
 
 <Base>
 	<section
-		class="max-w-sm mx-auto pt-16 pb-8 md:pt-64 md:max-w-2xl lg:max-w-5xl"
+		class="max-w-sm mx-auto py-12 md:py-32 md:max-w-2xl lg:max-w-5xl"
 	>
 		<h1 class="text-4xl md:text-6xl lg:text-8xl font-light">
 			<span class="block">
@@ -23,19 +24,11 @@ import SectionButton from "../components/home/SectionButton.astro";
 	>
 		<section class="md:border-r md:border-r-black">
 			<section class="py-8 md:pr-8 md:sticky md:top-0">
-				<h3 class="text-lg mb-4 md:text-xl lg:text-3xl">
+				<h3 class="text-lg mb-4 md:text-xl lg:text-2xl">
 					Es necesario y urgente cambiar la noción y el modelo vigentes de
 					maternidad.
 				</h3>
-
-				<p class="font-serif font-bold mb-4">Google forms</p>
-
-				<a
-					href="/"
-					class="inline-block w-full border border-black bg-transparent py-4 px-8"
-				>
-					Firma el manifiesto &#8594;
-				</a>
+				<LinkButton href="/" text="Firma el manifiesto" important={true} />
 			</section>
 		</section>
 

@@ -2,10 +2,11 @@
 import Base from "../layouts/Base.astro";
 import NoteLink from "../components/manifiesto/NoteLink.astro";
 import SimpleExternalLink from "../components/ui/SimpleExternalLink.astro";
+import LinkButton from "../components/ui/LinkButton.astro";
 ---
 
 <Base>
-	<section class="pt-16 pb-8 md:pt-64">
+	<section class="py-12 md:py-32">
 		<h1
 			class="font-serif font-black text-center text-4xl md:text-6xl lg:text-8xl"
 		>
@@ -18,29 +19,17 @@ import SimpleExternalLink from "../components/ui/SimpleExternalLink.astro";
 	>
 		<section class="md:border-r md:border-r-black">
 			<section class="py-8 md:pr-8 md:sticky md:top-0">
-				<h3 class="text-lg mb-4 md:text-xl lg:text-3xl">
+				<h3 class="text-lg mb-4 md:text-xl lg:text-2xl">
 					Es necesario y urgente cambiar la noción y el modelo vigentes de
 					maternidad.
 				</h3>
 
 				<section class="mb-4">
-					<p class="font-serif font-bold mb-4">Google forms</p>
-					<a
-						href="/"
-						class="inline-block w-full border border-black bg-transparent py-4 px-8"
-					>
-						Firma el manifiesto &#8594;
-					</a>
+					<LinkButton href="/" text="Firma el manifiesto" important={true} />
 				</section>
 
 				<section class="mb-4">
-					<p class="font-serif font-bold mb-4">PDF</p>
-					<a
-						href="/files/manifiesto-por-las-madres.pdf"
-						class="inline-block w-full border border-black bg-transparent py-4 px-8"
-					>
-						Descarga el manifiesto &#8594;
-					</a>
+					<LinkButton href="/files/manifiesto-por-las-madres.pdf" text="Descarga el manifiesto" />
 				</section>
 			</section>
 		</section>
