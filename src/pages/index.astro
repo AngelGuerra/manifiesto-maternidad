@@ -1,6 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import Section from "../components/home/Section.astro";
+import SectionButton from "../components/home/SectionButton.astro";
 ---
 
 <Base>
@@ -23,7 +24,8 @@ import Section from "../components/home/Section.astro";
 		<section class="md:border-r md:border-r-black">
 			<section class="py-8 md:pr-8 md:sticky md:top-0">
 				<h3 class="text-lg mb-4 md:text-xl lg:text-3xl">
-					Luchamos por la mujer, luchamos por la humanidad y por la biosfera.
+					Es necesario y urgente cambiar la noción y el modelo vigentes de
+					maternidad.
 				</h3>
 
 				<p class="font-serif font-bold mb-4">Google forms</p>
@@ -38,12 +40,34 @@ import Section from "../components/home/Section.astro";
 		</section>
 
 		<section class="md:col-start-2 md:col-end-4">
-			<Section
-				title="Manifiesto"
-				subtitle="Es necesario y urgente cambiar la noción y el modelo vigentes de maternidad."
-				href="/manifiesto/"
-				buttonText="Manifiesto"
-			/>
+			<section
+				class="flex flex-col gap-2 justify-end items-start border border-b-0 border-black pt-4 pl-4 md:pt-8 md:pl-8 md:border-0 md:border-b lg:gap-0 last-of-type:border-b-0"
+			>
+				<h2 class="text-xl font-serif font-extrabold md:mb-4 md:text-2xl lg:text-4xl">
+					Abstract
+				</h2>
+				<p class="text-lg pb-0 pr-4 md:pb-4 md:text-xl lg:text-3xl">
+					El modelo de maternidad y crianza que prevalece en nuestra sociedad
+					supone una esclavitud para la mujer y produce sufrimiento a la madre y
+					a la criatura. También, desde distintos campos del conocimiento, se ha
+					demostrado que este modelo bloquea la sociabilidad de la criatura
+					humana, generando la violencia y agresividad que imperan en nuestra
+					sociedad. Sin embargo, debemos ser conscientes de que la esclavitud,
+					el sufrimiento y la violencia se producen por las condiciones sociales
+					de invisibilidad y precariedad en las que se desarrolla la maternidad,
+					y por la violencia obstétrica y perinatal normalizadas. No son, por lo
+					tanto, consecuencias inevitables inherentes a la maternidad per se.
+					Porque la maternidad, impulsada por el deseo materno, debería ser una
+					etapa placentera y gozosa de la vida de la mujer. Además, maternar con
+					amor crea orden simbólico de la madre, que es el germen de las
+					sociedades pacíficas y cooperativas. Con el presente manifiesto
+					lanzamos una serie de propuestas para hacer efectivo el pleno
+					reconocimiento individual y social de la maternidad.
+				</p>
+				<div class="flex justify-end w-full">
+					<SectionButton href="/manifiesto/" text="Manifiesto" />
+				</div>
+			</section>
 
 			<!-- CARD -->
 			<Section

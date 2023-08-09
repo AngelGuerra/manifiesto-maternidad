@@ -1,0 +1,19 @@
+---
+import signatories from "../../data/signatories.json";
+---
+
+<section class="py-8">
+	<h3 class="text-4xl text-center">
+		Personas que ya han firmado el manifiesto
+	</h3>
+
+	<div
+		class="grid grid-cols-2 gap-4 justify-center items-center font-serif py-8 md:text-lg md:grid-cols-3"
+	>
+		{
+			signatories.map((signatory) => (
+				<span class="md:text-center">{signatory}</span>
+			))
+		}
+	</div>
+</section>

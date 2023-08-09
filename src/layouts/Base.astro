@@ -4,6 +4,7 @@ import "@fontsource-variable/raleway";
 
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
+import Signatures from "../components/common/Signatures.astro";
 ---
 
 <html lang="es-ES" class="scroll-smooth">
@@ -40,25 +41,7 @@ import Header from "../components/Header.astro";
 			<slot />
 		</main>
 
-		<section class="py-8">
-			<h3 class="text-4xl text-center">
-				Texto para las personas que ya han firmado el manifiesto
-			</h3>
-
-			<div
-				class="grid grid-cols-2 gap-4 justify-center items-center font-serif py-8 md:text-lg md:grid-cols-3"
-			>
-				<span class="md:text-center">Marie Curie</span>
-				<span class="md:text-center">Virginia Woolf</span>
-				<span class="md:text-center">Clara Zetkin</span>
-				<span class="md:text-center">Clara Campoamor</span>
-				<span class="md:text-center">Amelia Earhart</span>
-				<span class="md:text-center">Frida Kahlo</span>
-				<span class="md:text-center">Simone de Beauvoir</span>
-				<span class="md:text-center">Ruth Bader Ginsburg</span>
-				<span class="md:text-center">Audre Lorde</span>
-			</div>
-		</section>
+		<Signatures />
 
 		<footer
 			class="border-t border-t-black grid grid-cols-3 divide-x divide-black"
