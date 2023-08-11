@@ -2,14 +2,17 @@
 export interface Props {
 	href: string;
 	text: string;
+	rel?: string;
+	target?: string;
 	important?: boolean;
 }
 
-const { href, text, important = false } = Astro.props;
+const { href, text, rel = "", target = "", important = false } = Astro.props;
+const linkProps = Object.fromEntries(Object.entries({ href, rel, target }).filter(([_, v]) => v !== ""))
 ---
 
 <a
-	href={href}
+	{ ...linkProps }
 	class="relative inline-block w-full border border-black bg-transparent py-4 px-8 transition-shadow shadow-[#fff_4px_4px_0_0,#000_4px_4px_0_1px] hover:shadow-[#fff_0_0_0_0,#000_0_0_0_0]"
 >
 	{

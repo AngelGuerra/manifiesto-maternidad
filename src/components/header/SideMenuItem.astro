@@ -2,17 +2,18 @@
 export interface Props {
 	href: string;
 	text: string;
-	rel: string;
+	rel?: string;
+	target?: string;
 }
 
-const { href, text, rel } = Astro.props;
+const { href, text, rel = "", target = "" } = Astro.props;
+const linkProps = Object.fromEntries(Object.entries({ href, rel, target }).filter(([_, v]) => v !== ""))
 ---
 
 <a
-	href={href}
+	{ ...linkProps }
 	class="flex flex-1 items-center px-5 py-2 text-xl font-semibold text-white transition duration-150 ease-in-out hover:text-purple-300 focus:bg-gray-100 focus:text-gray-800 focus:outline-none md:py-6"
 	role="menuitem"
-	rel={rel}
 >
 	{text}
 </a>
