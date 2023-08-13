@@ -7,35 +7,29 @@ import Header from "../components/Header.astro";
 import Signatures from "../components/common/Signatures.astro";
 
 export interface Props {
+	title: string;
+	description: string;
 	showSignatures?: boolean;
+	noindex?: boolean;
 }
 
-const { showSignatures = true } = Astro.props;
+const {
+	title,
+	description,
+	showSignatures = true,
+	noindex = false,
+} = Astro.props;
 ---
 
 <html lang="es-ES" class="scroll-smooth">
 	<head>
-		<Head />
+		<Head title={title} description={description} noindex={noindex} />
 		<style is:global>
 			[x-cloak] {
 				display: none !important;
 			}
 
 			body {
-				/* https://webgradients.com/ */
-
-				/* background-color: #8ec5fc;
-				background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%); */
-
-				/* background-color: #4158D0;
-				background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
-
-				/* background-color: #D9AFD9;
-				background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%); */
-
-				/* background-color: #0093E9;
-				background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
-
 				background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 			}
 		</style>
@@ -49,15 +43,14 @@ const { showSignatures = true } = Astro.props;
 
 		{showSignatures && <Signatures />}
 
-		<footer class="grid grid-cols-3 divide-x divide-black">
+		<footer class="grid grid-cols-1 md:grid-cols-2 divide-x divide-black">
 			<div class="text-center py-6">
-				<a href="/politica-de-privacidad/">Política de privacidad</a>
+				<a href="/politica-de-privacidad-y-aviso-legal/"
+					>Política de privacidad y aviso legal</a
+				>
 			</div>
 			<div class="text-center py-6">
 				<a href="/politica-de-cookies/">Política de cookies</a>
-			</div>
-			<div class="text-center py-6">
-				<a href="/aviso-legal/">Aviso legal</a>
 			</div>
 		</footer>
 	</body>

@@ -5,10 +5,11 @@ import SectionButton from "../components/home/SectionButton.astro";
 import LinkButton from "../components/ui/LinkButton.astro";
 ---
 
-<Base>
-	<section
-		class="max-w-sm mx-auto py-12 md:py-32 md:max-w-2xl lg:max-w-5xl"
-	>
+<Base
+	title="El manifiesto"
+	description="Diversos grupos y asociaciones, llevamos años tratando de llamar la atención sobre la noción y el modelo de maternidad vigentes"
+>
+	<section class="max-w-sm mx-auto py-12 md:py-32 md:max-w-2xl lg:max-w-5xl">
 		<h1 class="text-4xl md:text-6xl lg:text-8xl font-light">
 			<span class="block">
 				<span class="font-serif font-black">Manifiesto</span> por
@@ -22,27 +23,13 @@ import LinkButton from "../components/ui/LinkButton.astro";
 	<section
 		class="grid grid-cols-1 md:grid-cols-3 md:border-t md:border-t-black"
 	>
-		<section class="md:border-r md:border-r-black">
-			<section class="py-8 md:pr-8 md:sticky md:top-0">
-				<h3 class="text-lg mb-4 md:text-xl lg:text-2xl">
-					Es necesario y urgente cambiar la noción y el modelo vigentes de
-					maternidad.
-				</h3>
-				<LinkButton
-					href="https://forms.gle/ZFNjYx9iLK8MJpUeA"
-					rel="noopener noreferrer external"
-					target="_blank"
-					text="Firma el manifiesto"
-					important={true}
-				/>
-			</section>
-		</section>
-
-		<section class="md:col-start-2 md:col-end-4">
+		<section class="order-2 md:col-start-2 md:col-end-4">
 			<section
 				class="flex flex-col gap-2 justify-end items-start border border-b-0 border-black pt-4 pl-4 md:pt-8 md:pl-8 md:border-0 md:border-b lg:gap-0 last-of-type:border-b-0"
 			>
-				<h2 class="text-xl font-serif font-extrabold md:mb-4 md:text-2xl lg:text-4xl">
+				<h2
+					class="text-xl font-serif font-extrabold md:mb-4 md:text-2xl lg:text-4xl"
+				>
 					Abstract
 				</h2>
 				<p class="text-lg pb-0 pr-4 md:pb-4 md:text-xl lg:text-3xl">
@@ -68,40 +55,28 @@ import LinkButton from "../components/ui/LinkButton.astro";
 				</div>
 			</section>
 
-			<!-- CARD -->
 			<Section
 				title="Propuestas"
 				subtitle="Exigimos una serie de propuestas necesarias para la urgente transformación de nuestra sociedad."
 				href="/propuestas/"
 				buttonText="Propuestas"
 			/>
+		</section>
 
-			<!-- CARD -->
-			<!-- <section
-				class="flex flex-col justify-end items-start border-b border-b-black"
-			>
-				<div class="aspect-video w-full">
-					<iframe
-						class="w-full h-full aspect-video"
-						src="https://www.youtube-nocookie.com/embed/ozs_f4ZT9sw"
-						title="YouTube video player"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen></iframe>
-				</div>
-			</section> -->
-
-			<!-- CARD -->
-			<!-- <section class="pt-8 pl-8 min-h-96 flex flex-col justify-end items-start">
-				<h2 class="text-4xl">Escucha el audio.</h2>
-
-				<div class="flex justify-end w-full">
-					<audio controls>
-						<source src="/audio/example.ogg" type="audio/ogg" />
-						<source src="/audio/example.mp3" type="audio/mpeg" />
-						 Your browser does not support the audio tag.
-					</audio>
-				</div>
-			</section> -->
+		<section class="order-1 md:border-r md:border-r-black">
+			<section class="py-8 md:pr-8 md:sticky md:top-0">
+				<h3 class="text-lg mb-4 md:text-xl lg:text-2xl">
+					Es necesario y urgente cambiar la noción y el modelo vigentes de
+					maternidad.
+				</h3>
+				<LinkButton
+					href="https://forms.gle/ZFNjYx9iLK8MJpUeA"
+					rel="noopener noreferrer external"
+					target="_blank"
+					text="Firma el manifiesto"
+					important={true}
+				/>
+			</section>
 		</section>
 	</section>
 </Base>

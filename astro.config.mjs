@@ -4,5 +4,8 @@ import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
+	site: "https://manifiestoporlasmadres.org/",
+	compressHTML: true,
+	trailingSlash: "always",
 	integrations: [tailwind(), alpinejs()],
 });

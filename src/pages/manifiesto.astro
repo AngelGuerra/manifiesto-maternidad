@@ -5,7 +5,10 @@ import SimpleExternalLink from "../components/ui/SimpleExternalLink.astro";
 import LinkButton from "../components/ui/LinkButton.astro";
 ---
 
-<Base>
+<Base
+	title="Es necesario y urgente cambiar la noción y el modelo vigentes de maternidad"
+	description="El modelo de maternidad y crianza que prevalece en nuestra sociedad supone una esclavitud para la mujer y produce sufrimiento a la madre y a la criatura"
+>
 	<section class="py-12 md:py-32">
 		<h1
 			class="font-serif font-black text-center text-4xl md:text-6xl lg:text-8xl"
@@ -17,30 +20,7 @@ import LinkButton from "../components/ui/LinkButton.astro";
 	<section
 		class="grid grid-cols-1 md:grid-cols-3 md:border-t md:border-t-black"
 	>
-		<section class="md:border-r md:border-r-black">
-			<section class="py-8 md:pr-8 md:sticky md:top-0">
-				<h3 class="text-lg mb-4 md:text-xl lg:text-2xl">
-					Es necesario y urgente cambiar la noción y el modelo vigentes de
-					maternidad.
-				</h3>
-
-				<section class="mb-4">
-					<LinkButton
-						href="https://forms.gle/ZFNjYx9iLK8MJpUeA"
-						rel="noopener noreferrer external"
-						target="_blank"
-						text="Firma el manifiesto"
-						important={true}
-					/>
-				</section>
-
-				<section class="mb-4">
-					<LinkButton href="/files/manifiesto-por-las-madres.pdf" text="Descarga el manifiesto" />
-				</section>
-			</section>
-		</section>
-
-		<article class="md:col-start-2 md:col-end-4 md:pl-8 md:py-8">
+		<article class="order-2 md:col-start-2 md:col-end-4 md:pl-8 md:py-8">
 			<h2
 				class="text-xl font-serif font-extrabold md:mb-4 md:text-2xl lg:text-4xl sticky"
 			>
@@ -920,5 +900,31 @@ import LinkButton from "../components/ui/LinkButton.astro";
 				</ol>
 			</footer>
 		</article>
+
+		<section class="order-1 md:border-r md:border-r-black">
+			<section class="py-8 md:pr-8 md:sticky md:top-0">
+				<h3 class="text-lg mb-4 md:text-xl lg:text-2xl">
+					Es necesario y urgente cambiar la noción y el modelo vigentes de
+					maternidad.
+				</h3>
+
+				<section class="mb-4">
+					<LinkButton
+						href="https://forms.gle/ZFNjYx9iLK8MJpUeA"
+						rel="noopener noreferrer external"
+						target="_blank"
+						text="Firma el manifiesto"
+						important={true}
+					/>
+				</section>
+
+				<section class="mb-4">
+					<LinkButton
+						href="/files/manifiesto-por-las-madres.pdf"
+						text="Descarga el manifiesto"
+					/>
+				</section>
+			</section>
+		</section>
 	</section>
 </Base>
