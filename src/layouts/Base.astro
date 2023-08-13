@@ -5,6 +5,7 @@ import "@fontsource-variable/raleway";
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
 import Signatures from "../components/common/Signatures.astro";
+import Sa11y from "../components/dev/Sa11y.astro";
 
 export interface Props {
 	title: string;
@@ -19,22 +20,21 @@ const {
 	showSignatures = true,
 	noindex = false,
 } = Astro.props;
+
+const loadSa11y = import.meta.env.DEV;
 ---
 
 <html lang="es-ES" class="scroll-smooth">
 	<head>
 		<Head title={title} description={description} noindex={noindex} />
+		{import.meta.env.DEV && <Sa11y />}
 		<style is:global>
 			[x-cloak] {
 				display: none !important;
 			}
-
-			body {
-				background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-			}
 		</style>
 	</head>
-	<body class="flex flex-col px-4 min-h-screen md:px-0 md:mx-20">
+	<body class="flex flex-col px-4 min-h-screen bg-zinc-50 md:px-0 md:mx-20">
 		<Header />
 
 		<main class="border-b border-b-black grow">

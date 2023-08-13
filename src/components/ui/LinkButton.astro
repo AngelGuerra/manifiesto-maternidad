@@ -4,15 +4,26 @@ export interface Props {
 	text: string;
 	rel?: string;
 	target?: string;
+	type?: string;
 	important?: boolean;
 }
 
-const { href, text, rel = "", target = "", important = false } = Astro.props;
-const linkProps = Object.fromEntries(Object.entries({ href, rel, target }).filter(([_, v]) => v !== ""))
+const {
+	href,
+	text,
+	rel = "",
+	target = "",
+	type = "",
+	important = false,
+} = Astro.props;
+const opensNewWindow = target === "_blank";
+const linkProps = Object.fromEntries(
+	Object.entries({ href, rel, target, type }).filter(([_, v]) => v !== ""),
+);
 ---
 
 <a
-	{ ...linkProps }
+	{...linkProps}
 	class="relative inline-block w-full border border-black bg-transparent py-4 px-8 transition-shadow shadow-[#fff_4px_4px_0_0,#000_4px_4px_0_1px] hover:shadow-[#fff_0_0_0_0,#000_0_0_0_0]"
 >
 	{
@@ -24,6 +35,7 @@ const linkProps = Object.fromEntries(Object.entries({ href, rel, target }).filte
 		)
 	}
 	{text}
+	{opensNewWindow && <span class="sr-only">&nbsp;Abre una nueva ventana</span>}
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		fill="none"
