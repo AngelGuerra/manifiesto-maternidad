@@ -33,22 +33,22 @@ const {
 			}
 		</style>
 	</head>
-	<body class="flex flex-col px-4 min-h-screen bg-zinc-50 md:px-0 md:mx-20">
+	<body class="flex min-h-screen flex-col bg-zinc-50 px-4 md:mx-20 md:px-0">
 		<Header />
 
-		<main class="border-b border-b-black grow">
+		<main class="grow border-b border-b-black">
 			<slot />
 		</main>
 
 		{showSignatures && <Signatures />}
 
-		<footer class="grid grid-cols-1 md:grid-cols-2 md:divide-x divide-black">
-			<div class="text-center py-6">
+		<footer class="grid grid-cols-1 divide-black md:grid-cols-2 md:divide-x">
+			<div class="py-6 text-center">
 				<a href="/politica-de-privacidad-y-aviso-legal/"
 					>Política de privacidad y aviso legal</a
 				>
 			</div>
-			<div class="text-center py-6">
+			<div class="py-6 text-center">
 				<a href="/politica-de-cookies/">Política de cookies</a>
 			</div>
 		</footer>

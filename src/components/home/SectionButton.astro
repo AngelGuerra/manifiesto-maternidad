@@ -9,7 +9,7 @@ const { href, text } = Astro.props;
 
 <a
 	href={href}
-	class="flex gap-2 justify-center items-center border border-b-0 border-r-0 border-black bg-transparent py-4 px-8 md:border-r transition-shadow shadow-[#fff_-4px_-4px_0_0,#000_-4px_-4px_0_1px] hover:shadow-[#fff_0_0_0_0,#000_0_0_0_0]"
+	class="flex items-center justify-center gap-2 border border-b-0 border-r-0 border-black bg-transparent px-8 py-4 shadow-[#fff_-4px_-4px_0_0,#000_-4px_-4px_0_1px] transition-shadow hover:shadow-[#fff_0_0_0_0,#000_0_0_0_0] md:border-r"
 >
 	{text}
 	<svg
@@ -18,7 +18,7 @@ const { href, text } = Astro.props;
 		viewBox="0 0 24 24"
 		stroke-width="1.5"
 		stroke="currentColor"
-		class="inline w-8 h-8"
+		class="inline h-8 w-8"
 	>
 		<path
 			stroke-linecap="round"

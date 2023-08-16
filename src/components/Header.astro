@@ -8,7 +8,7 @@ const isHomePage = Astro.url.pathname === "/";
 <div class="relative">
 	<div x-data="{ openMenu: false }" @click.outside="openMenu = false" x-cloak>
 		<div class="relative border-b border-b-black">
-			<nav class="relative flex py-7 w-full items-center justify-around">
+			<nav class="relative flex w-full items-center justify-around py-7">
 				<div class="flex flex-1 items-center justify-between">
 					{
 						isHomePage ? (
@@ -34,7 +34,7 @@ const isHomePage = Astro.url.pathname === "/";
 							viewBox="0 0 24 24"
 							stroke-width="1.5"
 							stroke="currentColor"
-							class="w-6 h-6"
+							class="h-6 w-6"
 						>
 							<path
 								stroke-linecap="round"
@@ -64,13 +64,13 @@ const isHomePage = Astro.url.pathname === "/";
 				aria-orientation="vertical"
 			>
 				<div class="border-b border-b-white">
-					<div class="py-7 md:mx-20 px-4 md:px-0">
+					<div class="px-4 py-7 md:mx-20 md:px-0">
 						<div class="flex items-center justify-between">
 							{
 								isHomePage ? (
 									<span>&nbsp;</span>
 								) : (
-									<a href="/" rel="home" class="text-white text-lg">
+									<a href="/" rel="home" class="text-lg text-white">
 										<span class="font-serif font-bold">Manifiesto</span> por las{" "}
 										<span class="font-serif font-bold">madres</span>
 									</a>
@@ -104,7 +104,7 @@ const isHomePage = Astro.url.pathname === "/";
 					</div>
 				</div>
 
-				<div class="flex flex-col border-l border-white md:flex-row md:ml-20">
+				<div class="flex flex-col border-l border-white md:ml-20 md:flex-row">
 					<div class="border-white md:w-2/3 md:border-r">
 						<div
 							class="border-b border-white px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white"
@@ -141,7 +141,7 @@ const isHomePage = Astro.url.pathname === "/";
 					</div>
 				</div>
 
-				<div class="border-t border-b border-white">
+				<div class="border-b border-t border-white">
 					<div class="border-l border-white md:mx-20">
 						<div
 							class="flex flex-col items-center px-5 py-4 font-semibold uppercase tracking-wide text-white md:flex-row md:space-x-4"

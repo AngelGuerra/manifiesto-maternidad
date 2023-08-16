@@ -1,6 +1,7 @@
 {
 	"name": "manifiesto-maternidad",
 	"type": "module",
+	"private": "true",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "astro dev",
@@ -8,7 +9,7 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"format": "prettier --write ."
+		"format": "prettier --write \"**/*.{js,ts,md,astro,json}\""
 	},
 	"dependencies": {
 		"@astrojs/alpinejs": "^0.2.2",
@@ -17,17 +18,25 @@
 		"@fontsource-variable/raleway": "^5.0.9",
 		"@types/alpinejs": "^3.7.2",
 		"alpinejs": "^3.12.3",
-		"astro": "^2.10.7",
-		"prettier": "^3.0.1",
-		"prettier-plugin-astro": "^0.11.0",
-		"prettier-plugin-tailwindcss": "^0.5.2",
+		"astro": "^2.10.9",
+		"prettier": "^3.0.2",
+		"prettier-plugin-astro": "^0.11.1",
+		"prettier-plugin-tailwindcss": "^0.5.3",
 		"sa11y": "^3.0.3",
 		"tailwindcss": "^3.3.3"
 	},
 	"prettier": {
 		"plugins": [
-			"prettier-plugin-tailwindcss",
-			"prettier-plugin-astro"
+			"prettier-plugin-astro",
+			"prettier-plugin-tailwindcss"
+		],
+		"overrides": [
+			{
+				"files": "*.astro",
+				"options": {
+					"parser": "astro"
+				}
+			}
 		],
 		"useTabs": true
 	}
