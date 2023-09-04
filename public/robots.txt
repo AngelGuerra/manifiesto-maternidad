@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.manifiestoporlasmadres.org/sitemap-index.xml
