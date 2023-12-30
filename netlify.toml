@@ -1,0 +1,7 @@
+[[redirects]]
+  from = "/manifiesto"
+  to = "/"
+
+[[redirects]]
+  from = "/propuestas"
+  to = "/"

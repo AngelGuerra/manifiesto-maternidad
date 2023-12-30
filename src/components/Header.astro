@@ -1,161 +1,168 @@
 ---
-import MainMenuItem from "../components/header/MainMenuItem.astro";
-import SideMenuItem from "../components/header/SideMenuItem.astro";
+import MainMenuItem from "@components/header/MainMenuItem.astro";
+import SideMenuItem from "@components/header/SideMenuItem.astro";
 
 const isHomePage = Astro.url.pathname === "/";
 ---
 
 <div class="relative">
-	<div x-data="{ openMenu: false }" @click.outside="openMenu = false" x-cloak>
-		<div class="relative border-b border-b-black">
-			<nav class="relative flex w-full items-center justify-around py-7">
-				<div class="flex flex-1 items-center justify-between">
-					{
-						isHomePage ? (
-							<span>&nbsp;</span>
-						) : (
-							<a href="/" rel="home" class="text-lg">
-								<span class="font-serif font-bold">Manifiesto</span> por las{" "}
-								<span class="font-serif font-bold">madres</span>
-							</a>
-						)
-					}
+  <div x-data="{ openMenu: false }" @click.outside="openMenu = false" x-cloak>
+    <div class="relative border-b border-b-black">
+      <nav class="relative flex w-full items-center justify-around py-7">
+        <div class="flex flex-1 items-center justify-between">
+          {
+            isHomePage ? (
+              <span>&nbsp;</span>
+            ) : (
+              <a href="/" rel="home" class="text-lg">
+                <span class="font-serif font-bold">Manifiesto</span> por las{" "}
+                <span class="font-serif font-bold">madres</span>
+              </a>
+            )
+          }
 
-					<button
-						type="button"
-						class="inline-flex items-center justify-center rounded-md p-3 pr-0"
-						aria-label="Menú principal"
-						aria-haspopup="true"
-						@click="openMenu = !openMenu"
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							class="h-6 w-6"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-						</svg>
-					</button>
-				</div>
-			</nav>
-		</div>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center rounded-md p-3 pr-0"
+            aria-label="Menú principal"
+            aria-haspopup="true"
+            @click="openMenu = !openMenu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-6 w-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
 
-		<div
-			@click="openMenu = false"
-			x-transition:enter="transition ease-out duration-150"
-			x-transition:enter-start="opacity-0 transform scale-95"
-			x-transition:enter-end="opacity-100 transform scale-100"
-			x-transition:leave="transition ease-in duration-100"
-			x-transition:leave-start="opacity-100 transform scale-100"
-			x-transition:leave-end="opacity-0 transform scale-95"
-			x-cloak
-			:class="{'translate-y-0 shadow-md duration-150': openMenu, '-translate-y-full': !openMenu}"
-			class="fixed inset-0 z-40 h-screen origin-top transform overflow-y-auto bg-black transition"
-		>
-			<div
-				class="relative overflow-hidden bg-black"
-				role="menu"
-				aria-orientation="vertical"
-			>
-				<div class="border-b border-b-white">
-					<div class="px-4 py-7 md:mx-20 md:px-0">
-						<div class="flex items-center justify-between">
-							{
-								isHomePage ? (
-									<span>&nbsp;</span>
-								) : (
-									<a href="/" rel="home" class="text-lg text-white">
-										<span class="font-serif font-bold">Manifiesto</span> por las{" "}
-										<span class="font-serif font-bold">madres</span>
-									</a>
-								)
-							}
+    <div
+      @click="openMenu = false"
+      x-transition:enter="transition ease-out duration-150"
+      x-transition:enter-start="opacity-0 transform scale-95"
+      x-transition:enter-end="opacity-100 transform scale-100"
+      x-transition:leave="transition ease-in duration-100"
+      x-transition:leave-start="opacity-100 transform scale-100"
+      x-transition:leave-end="opacity-0 transform scale-95"
+      x-cloak
+      :class="{'translate-y-0 shadow-md duration-150': openMenu, '-translate-y-full': !openMenu}"
+      class="fixed inset-0 z-40 h-screen origin-top transform overflow-y-auto bg-black transition"
+    >
+      <div
+        class="relative overflow-hidden bg-black"
+        role="menu"
+        aria-orientation="vertical"
+      >
+        <div class="border-b border-b-white">
+          <div class="px-4 py-7 md:mx-20 md:px-0">
+            <div class="flex items-center justify-between">
+              {
+                isHomePage ? (
+                  <span>&nbsp;</span>
+                ) : (
+                  <a href="/" rel="home" class="text-lg text-white">
+                    <span class="font-serif font-bold">Manifiesto</span> por las{" "}
+                    <span class="font-serif font-bold">madres</span>
+                  </a>
+                )
+              }
 
-							<button
-								@click="openMenu = !openMenu"
-								type="button"
-								class="inline-flex items-center justify-center rounded-md p-3 pr-0 text-white"
-								aria-label="Cerrar el menú"
-							>
-								<span
-									class="sr-only mr-1 font-semibold uppercase tracking-wide text-white"
-									>Cerrar</span
-								>
-								<svg
-									class="h-6 w-6"
-									stroke="currentColor"
-									fill="none"
-									viewBox="0 0 24 24"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M6 18L18 6M6 6l12 12"></path>
-								</svg>
-							</button>
-						</div>
-					</div>
-				</div>
+              <button
+                @click="openMenu = !openMenu"
+                type="button"
+                class="inline-flex items-center justify-center rounded-md p-3 pr-0 text-white"
+                aria-label="Cerrar el menú"
+              >
+                <span
+                  class="sr-only mr-1 font-semibold uppercase tracking-wide text-white"
+                  >Cerrar</span
+                >
+                <svg
+                  class="h-6 w-6"
+                  stroke="currentColor"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
 
-				<div class="flex flex-col border-l border-white md:ml-20 md:flex-row">
-					<div class="border-white md:w-2/3 md:border-r">
-						<div
-							class="border-b border-white px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white"
-						>
-							Menú
-						</div>
-						<MainMenuItem href="/" text="Inicio" />
-						<MainMenuItem href="/manifiesto/" text="Manifiesto" />
-						<MainMenuItem href="/propuestas/" text="Propuestas" />
-					</div>
+        <div class="flex flex-col border-l border-white md:ml-20 md:flex-row">
+          <div class="border-white md:w-2/3 md:border-r">
+            <div
+              class="border-b border-white px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white"
+            >
+              Menú
+            </div>
+            <MainMenuItem href="/#el-deseo-materno" text="El deseo materno" />
+            <MainMenuItem
+              href="/#modelo-actual-dominante-de-maternidad"
+              text="Modelo actual dominante"
+            />
+            <MainMenuItem
+              href="/#el-futuro-de-la-humanidad"
+              text="El futuro de la humanidad"
+            />
+            <MainMenuItem href="/#propuestas" text="Propuestas" />
+          </div>
 
-					<div class="flex flex-col md:w-1/3">
-						<div
-							class="border-b border-t border-white px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white md:border-t-0"
-						>
-							Enlaces externos
-						</div>
+          <div class="flex flex-col md:w-1/3">
+            <div
+              class="border-b border-t border-white px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white md:border-t-0"
+            >
+              Enlaces externos
+            </div>
 
-						<div
-							class="flex flex-1 flex-col py-2 md:divide-y md:divide-gray-300 md:py-0"
-						>
-							<SideMenuItem
-								href="/files/manifiesto-por-las-madres.pdf"
-								text="Descarga el manifiesto (PDF)"
-								type="application/pdf"
-							/>
-							<SideMenuItem
-								href="https://forms.gle/ZFNjYx9iLK8MJpUeA"
-								rel="external noopener noreferrer"
-								target="_blank"
-								text="Firma el manifiesto"
-							/>
-						</div>
-					</div>
-				</div>
+            <div
+              class="flex flex-1 flex-col py-2 md:divide-y md:divide-gray-300 md:py-0"
+            >
+              <SideMenuItem
+                href="/files/manifiesto-por-las-madres.pdf"
+                text="Descarga el manifiesto (PDF)"
+                type="application/pdf"
+              />
+              <SideMenuItem
+                href="https://forms.gle/ZFNjYx9iLK8MJpUeA"
+                rel="external noopener noreferrer"
+                target="_blank"
+                text="Firma el manifiesto"
+              />
+            </div>
+          </div>
+        </div>
 
-				<div class="border-b border-t border-white">
-					<div class="border-l border-white md:mx-20">
-						<div
-							class="flex flex-col items-center px-5 py-4 font-semibold uppercase tracking-wide text-white md:flex-row md:space-x-4"
-						>
-							<div>
-								<span x-text="new Date().getFullYear()"></span>
-								<a class="text-purple-300 hover:underline" href="/" rel="home"
-									>Manifiesto por las madres</a
-								>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="border-b border-t border-white">
+          <div class="border-l border-white md:mx-20">
+            <div
+              class="flex flex-col items-center px-5 py-4 font-semibold uppercase tracking-wide text-white md:flex-row md:space-x-4"
+            >
+              <div>
+                <span x-text="new Date().getFullYear()"></span>
+                <a class="text-purple-300 hover:underline" href="/" rel="home"
+                  >Manifiesto por las madres</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

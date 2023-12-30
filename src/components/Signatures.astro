@@ -1,0 +1,42 @@
+---
+import signatories from "@data/signatories.json";
+import collectives from "@data/collectives.json";
+---
+
+<section class="border-b border-b-black py-12">
+  <h3 class="mb-12 text-center text-2xl lg:text-4xl">
+    <span class="font-bold text-purple-600">19</span> colectivos ya han firmado el
+    manifiesto, aquí están algunas de ellos
+  </h3>
+
+  <div
+    class="grid grid-cols-2 items-center justify-center gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
+  >
+    {
+      [...new Set(collectives)].map((collective) => (
+        <p class="flex flex-row items-center justify-start gap-2 text-sm uppercase">
+          <span class="not-sr-only text-purple-600">{`›`}</span> {collective}
+        </p>
+      ))
+    }
+  </div>
+</section>
+
+<section class="border-b border-b-black py-12">
+  <h3 class="mb-12 text-center text-2xl lg:text-4xl">
+    <span class="font-bold text-purple-600">517</span> personas ya han firmado el
+    manifiesto, aquí están algunas de ellas
+  </h3>
+
+  <div
+    class="grid grid-cols-2 items-center justify-center gap-4 pb-8 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
+  >
+    {
+      [...new Set(signatories)].map((signatory) => (
+        <p class="flex flex-row items-center justify-start gap-2 text-sm uppercase">
+          <span class="not-sr-only text-purple-600">{`›`}</span> {signatory}
+        </p>
+      ))
+    }
+  </div>
+</section>

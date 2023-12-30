@@ -1,8 +1,8 @@
 ---
-export interface Props {
-	title: string;
-	description: string;
-	noindex: boolean;
+interface Props {
+  title: string;
+  description: string;
+  noindex: boolean;
 }
 
 const { title, description, noindex } = Astro.props;
@@ -16,8 +16,8 @@ const socialImageURL = new URL("/images/social-1200x630.png", Astro.url);
 <meta name="description" content={description} />
 
 <meta
-	name="viewport"
-	content="width=device-width, height=device-height, initial-scale=1.0"
+  name="viewport"
+  content="width=device-width, height=device-height, initial-scale=1.0"
 />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 {noindex && <meta name="robots" content="noindex, nofollow" />}
@@ -31,8 +31,8 @@ const socialImageURL = new URL("/images/social-1200x630.png", Astro.url);
 <meta name="apple-mobile-web-app-title" content={siteName} />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta
-	name="apple-mobile-web-app-status-bar-style"
-	content="black-translucent"
+  name="apple-mobile-web-app-status-bar-style"
+  content="black-translucent"
 />
 <meta name="apple-touch-fullscreen" content="yes" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

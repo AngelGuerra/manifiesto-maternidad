@@ -1,24 +1,24 @@
 ---
 export interface Props {
-	href: string;
-	text: string;
-	rel?: string;
-	target?: string;
-	type?: string;
+  href: string;
+  text: string;
+  rel?: string;
+  target?: string;
+  type?: string;
 }
 
 const { href, text, rel = "", target = "", type = "" } = Astro.props;
 const opensNewWindow = target === "_blank";
 const linkProps = Object.fromEntries(
-	Object.entries({ href, rel, target, type }).filter(([_, v]) => v !== ""),
+  Object.entries({ href, rel, target, type }).filter(([_, v]) => v !== ""),
 );
 ---
 
 <a
-	{...linkProps}
-	class="flex flex-1 items-center px-5 py-2 text-xl font-semibold text-white transition duration-150 ease-in-out hover:text-purple-300 focus:bg-gray-100 focus:text-gray-800 focus:outline-none md:py-6"
-	role="menuitem"
+  {...linkProps}
+  class="flex flex-1 items-center px-5 py-2 text-xl font-semibold text-white transition duration-150 ease-in-out hover:text-purple-300 focus:bg-gray-100 focus:text-gray-800 focus:outline-none md:py-6"
+  role="menuitem"
 >
-	{text}
-	{opensNewWindow && <span class="sr-only">&nbsp;Abre una nueva ventana</span>}
+  {text}
+  {opensNewWindow && <span class="sr-only">&nbsp;Abre una nueva ventana</span>}
 </a>

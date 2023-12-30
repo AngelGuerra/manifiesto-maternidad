@@ -1,16 +1,16 @@
 ---
 export interface Props {
-	href: string;
-	text: string;
+  href: string;
+  text: string;
 }
 
 const { href, text } = Astro.props;
 ---
 
 <a
-	href={href}
-	class="block rounded-md px-3 py-2 text-3xl font-semibold uppercase tracking-tight text-white transition duration-150 ease-in-out hover:bg-transparent hover:text-purple-300 focus:bg-gray-100 focus:text-gray-800 focus:outline-none md:text-5xl lg:text-6xl"
-	role="menuitem"
+  href={href}
+  class="block rounded-md px-3 py-2 text-3xl font-semibold uppercase tracking-tight text-white transition duration-150 ease-in-out hover:bg-transparent hover:text-purple-300 focus:bg-gray-100 focus:text-gray-800 focus:outline-none lg:text-4xl xl:text-5xl"
+  role="menuitem"
 >
-	{text}
+  {text}
 </a>

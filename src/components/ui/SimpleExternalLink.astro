@@ -1,20 +1,20 @@
 ---
-export interface Props {
-	href: string;
-	text: string;
-	type?: string;
+interface Props {
+  href: string;
+  text: string;
+  type?: string;
 }
 
 const { href, text, type } = Astro.props;
 const linkProps = Object.fromEntries(
-	Object.entries({ href, type }).filter(([_, v]) => v !== ""),
+  Object.entries({ href, type }).filter(([_, v]) => v !== ""),
 );
 ---
 
 <a
-	{...linkProps}
-	target="_blank"
-	rel="noopener noreferrer external"
-	class="text-blue-700 underline"
-	>{text}&nbsp;<span class="sr-only">Abre una nueva ventana.</span></a
+  {...linkProps}
+  target="_blank"
+  rel="noopener noreferrer external"
+  class="text-blue-700 underline"
+  >{text}&nbsp;<span class="sr-only">Abre una nueva ventana.</span></a
 >

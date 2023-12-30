@@ -1,90 +1,79 @@
 ---
-import Base from "../layouts/Base.astro";
-import Section from "../components/home/Section.astro";
-import SectionButton from "../components/home/SectionButton.astro";
-import LinkButton from "../components/ui/LinkButton.astro";
+import Base from "@layouts/Base.astro";
+import LinkButton from "@components/ui/LinkButton.astro";
+import SignFixedButton from "@components/ui/SignFixedButton.astro";
+
+import ElDeseoMaterno from "@partials/home/el-deseo-materno.astro";
+import ModeloActualDominante from "@partials/home/modelo-actual-dominante-de-maternidad.astro";
+import Esclavitud from "@partials/home/modelo-actual-dominante-de-maternidad/esclavitud.astro";
+import Sufrimiento from "@partials/home/modelo-actual-dominante-de-maternidad/sufrimiento.astro";
+import Violencia from "@partials/home/modelo-actual-dominante-de-maternidad/violencia.astro";
+import ElFuturoDeLaHumanidad from "@partials/home/el-futuro-de-la-humanidad.astro";
+import Propuestas from "@partials/home/propuestas.astro";
+import Notas from "@partials/home/notas.astro";
 ---
 
 <Base
-	title="Es necesario y urgente cambiar la noción y el modelo vigentes de maternidad"
-	description="Diversos grupos y asociaciones, llevamos años tratando de llamar la atención sobre la noción y el modelo de maternidad vigentes"
+  title="Es necesario y urgente cambiar la noción y el modelo vigentes de maternidad"
+  description="Diversos grupos y asociaciones, llevamos años tratando de llamar la atención sobre la noción y el modelo de maternidad vigentes"
 >
-	<section class="mx-auto max-w-sm py-12 md:max-w-2xl md:py-32 lg:max-w-5xl">
-		<h1 class="text-4xl font-light md:text-6xl lg:text-8xl">
-			<span class="block">
-				<span class="font-serif font-black">Manifiesto</span> por
-			</span>
-			<span class="block text-right">
-				las <span class="font-serif font-black">madres</span>
-			</span>
-		</h1>
-	</section>
+  <section class="mx-auto max-w-sm py-12 md:max-w-2xl md:py-32 lg:max-w-5xl">
+    <h1 class="text-4xl font-light md:text-6xl lg:text-8xl">
+      <span class="block">
+        <span class="font-serif font-black">Manifiesto</span> por
+      </span>
+      <span class="block text-right">
+        las <span class="font-serif font-black">madres</span>
+      </span>
+    </h1>
+  </section>
 
-	<section
-		class="grid grid-cols-1 md:grid-cols-3 md:border-t md:border-t-black"
-	>
-		<section class="order-2 md:col-start-2 md:col-end-4">
-			<section
-				class="flex flex-col items-start justify-end gap-2 border border-b-0 border-black pl-4 pt-4 last-of-type:border-b-0 md:border-0 md:border-b md:pl-8 md:pt-8 lg:gap-0"
-			>
-				<h2
-					class="font-serif text-xl font-extrabold md:mb-4 md:text-2xl lg:text-4xl"
-				>
-					Abstract
-				</h2>
-				<p class="pb-0 pr-4 text-lg md:pb-4 md:text-xl lg:text-3xl">
-					El modelo de maternidad y crianza que prevalece en nuestra sociedad
-					supone una esclavitud para la mujer y produce sufrimiento a la madre y
-					a la criatura. También, desde distintos campos del conocimiento, se ha
-					demostrado que este modelo bloquea la sociabilidad de la criatura
-					humana, generando la violencia y agresividad que imperan en nuestra
-					sociedad. Sin embargo, debemos ser conscientes de que la esclavitud,
-					el sufrimiento y la violencia se producen por las condiciones sociales
-					de invisibilidad y precariedad en las que se desarrolla la maternidad,
-					y por la violencia obstétrica y perinatal normalizadas. No son, por lo
-					tanto, consecuencias inevitables inherentes a la maternidad per se.
-					Porque la maternidad, impulsada por el deseo materno, debería ser una
-					etapa placentera y gozosa de la vida de la mujer. Además, maternar con
-					amor crea orden simbólico de la madre, que es el germen de las
-					sociedades pacíficas y cooperativas. Con el presente manifiesto
-					lanzamos una serie de propuestas para hacer efectivo el pleno
-					reconocimiento individual y social de la maternidad.
-				</p>
-				<div class="flex w-full justify-end">
-					<SectionButton href="/manifiesto/" text="Manifiesto" />
-				</div>
-			</section>
+  <section
+    class="grid grid-cols-1 md:grid-cols-3 md:border-t md:border-t-black"
+  >
+    <article class="order-2 md:col-start-2 md:col-end-4 md:py-8 md:pl-8">
+      <ElDeseoMaterno />
+      <ModeloActualDominante />
+      <Esclavitud />
+      <Sufrimiento />
+      <Violencia />
+      <ElFuturoDeLaHumanidad />
+      <Propuestas />
+      <Notas />
+    </article>
 
-			<Section
-				title="Propuestas"
-				subtitle="Exigimos una serie de propuestas necesarias para la urgente transformación de nuestra sociedad."
-				href="/propuestas/"
-				buttonText="Propuestas"
-			/>
-		</section>
+    <section class="order-1 md:border-r md:border-r-black">
+      <section class="py-8 md:sticky md:top-0 md:pr-8">
+        <h3 class="mb-4 text-lg md:text-xl lg:text-2xl">
+          Es necesario y urgente cambiar la noción y el modelo vigentes de
+          maternidad.
+        </h3>
 
-		<section class="order-1 md:border-r md:border-r-black">
-			<section class="py-8 md:sticky md:top-0 md:pr-8">
-				<h3 class="mb-4 text-lg md:text-xl lg:text-2xl">
-					Es necesario y urgente cambiar la noción y el modelo vigentes de
-					maternidad.
-				</h3>
+        <section class="mb-4">
+          <LinkButton
+            href="https://forms.gle/ZFNjYx9iLK8MJpUeA"
+            rel="noopener noreferrer external"
+            target="_blank"
+            text="Firma el manifiesto"
+            important={true}
+          />
+        </section>
 
-				<section class="mb-4">
-					<LinkButton
-						href="https://forms.gle/ZFNjYx9iLK8MJpUeA"
-						rel="noopener noreferrer external"
-						target="_blank"
-						text="Firma el manifiesto"
-						important={true}
-					/>
-				</section>
+        <section class="mb-4">
+          <LinkButton
+            href="/files/manifiesto-por-las-madres.pdf"
+            text="Descarga el manifiesto (PDF)"
+            type="application/pdf"
+          />
+        </section>
 
-				<section class="mb-4">
-					<video class="h-auto w-full" src="/video/abstract.mp4" controls
-					></video>
-				</section>
-			</section>
-		</section>
-	</section>
+        <section class="mb-4">
+          <video class="h-auto w-full" src="/video/abstract.mp4" controls
+          ></video>
+        </section>
+      </section>
+    </section>
+  </section>
+
+  <SignFixedButton />
 </Base>

@@ -1,44 +1,28 @@
 {
-	"name": "manifiesto-maternidad",
-	"type": "module",
-	"private": "true",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro",
-		"format": "prettier --write \"**/*.{js,ts,md,astro,json}\""
-	},
-	"dependencies": {
-		"@astrojs/alpinejs": "^0.3.0",
-		"@astrojs/sitemap": "^3.0.0",
-		"@astrojs/tailwind": "^5.0.0",
-		"@fontsource-variable/bodoni-moda": "^5.0.9",
-		"@fontsource-variable/raleway": "^5.0.9",
-		"@types/alpinejs": "^3.13.1",
-		"alpinejs": "^3.13.0",
-		"astro": "^3.1.1",
-		"prettier": "^3.0.3",
-		"prettier-plugin-astro": "^0.12.0",
-		"prettier-plugin-tailwindcss": "^0.5.4",
-		"sa11y": "^3.0.3",
-		"tailwindcss": "^3.3.3"
-	},
-	"prettier": {
-		"plugins": [
-			"prettier-plugin-astro",
-			"prettier-plugin-tailwindcss"
-		],
-		"overrides": [
-			{
-				"files": "*.astro",
-				"options": {
-					"parser": "astro"
-				}
-			}
-		],
-		"useTabs": true
-	}
+  "name": "manifiesto-maternidad",
+  "type": "module",
+  "private": "true",
+  "version": "0.0.2",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@astrojs/alpinejs": "^0.3.2",
+    "@astrojs/sitemap": "^3.0.4",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/bodoni-moda": "^5.0.9",
+    "@fontsource-variable/raleway": "^5.0.17",
+    "@types/alpinejs": "^3.13.5",
+    "alpinejs": "^3.13.3",
+    "astro": "^4.0.8",
+    "prettier": "^3.1.1",
+    "prettier-plugin-astro": "^0.12.3",
+    "prettier-plugin-tailwindcss": "^0.5.10",
+    "tailwindcss": "^3.4.0"
+  }
 }
